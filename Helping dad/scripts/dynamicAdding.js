@@ -1,10 +1,35 @@
-box = document.getElementsByClassName("box")
-cut = document.getElementById("first-cut")
+const box = document.getElementsByClassName("box")
 function changeColor() {
+    const cut = document.createElement("div")
     cut.style.position = "absolute";
     cut.style.width="50%";
     cut.style.height="100%";
-    cut.style.backgroundColor = "aqua";
+    cut.style.backgroundColor = "rgba(230, 212, 223, 0.3)";
+    cut.style.zIndex = "0";
+    box[0].appendChild(cut);
+
+    const cut2 = document.createElement("div")
+    cut2.style.position = "absolute";
+    cut2.style.width = "0";
+    cut2.style.height = "0";
+
+    const computedStyles = window.getComputedStyle(box[0]);
+    const width = computedStyles.width;
+    const height = computedStyles.height;
+    cut2.style.borderTop = parseFloat(height)+"px solid transparent";
+    //cut2.style.borderBottom = parseFloat(height)+"px solid rgba(100, 150, 200, 0.5)";
+    //cut2.style.borderLeft = "230px solid rgba(100, 150, 200, 0.5)";
+    cut2.style.borderRight = "230px solid rgba(100, 150, 200, 0.5)";
+    cut2.style.zIndex = "0";
+    box[0].appendChild(cut2);
+
+    const cut3 = document.createElement("div")
+    cut3.style.borderTop = parseFloat(height)+"px solid transparent";
+    //cut2.style.borderBottom = parseFloat(height)+"px solid rgba(100, 150, 200, 0.5)";
+    //cut2.style.borderLeft = "230px solid rgba(100, 150, 200, 0.5)";
+    cut3.style.borderRight = "230px solid rgba(100, 150, 200, 0.5)";
+    cut3.style.zIndex = "0";
+    box[0].appendChild(cut3);
 }
 function DynamicPopulating(amount,content,clear){
 
@@ -38,7 +63,7 @@ function DynamicPopulating(amount,content,clear){
         ConvertAngleToRotateToString = AngleToRotateBy+"deg"
         number.style.rotate = ConvertAngleToRotateToString
         AngleToRotateBy+=10
-
+        number.style.zIndex = "5";
         box[0].appendChild(number)
 
     }
