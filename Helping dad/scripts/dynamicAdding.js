@@ -1,9 +1,17 @@
 box = document.getElementsByClassName("box")
-
+cut = document.getElementById("first-cut")
+function changeColor() {
+    cut.style.position = "absolute";
+    cut.style.width="50%";
+    cut.style.height="100%";
+    cut.style.backgroundColor = "aqua";
+}
 function DynamicPopulating(amount,content,clear){
+
     if(clear){
         box[0].innerHTML = "";
     }
+    changeColor();
     AngleToRotateBy = 20
     for (let i = 0; i < amount; i++) {
         number = document.createElement("span")
@@ -15,11 +23,11 @@ function DynamicPopulating(amount,content,clear){
         }
         number.style.color = "black"
         const computedStyles = window.getComputedStyle(box[0]);
-        maxDisplacementHorizontal = parseFloat(computedStyles.width)-150
+        maxDisplacementHorizontal = parseFloat(computedStyles.width)-60
         randomisedplacement = Math.floor((Math.random()*maxDisplacementHorizontal)+1)
         makeIntoString = randomisedplacement+"px"
 
-        maxDisplacementVertical = parseFloat(computedStyles.height) - 150
+        maxDisplacementVertical = parseFloat(computedStyles.height) - 60
         randomisedplacement2 = Math.floor((Math.random()*maxDisplacementVertical)+1)
         makeIntoString2 = randomisedplacement2+"px"
 
