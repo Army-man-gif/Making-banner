@@ -9,7 +9,7 @@ function DynamicPopulating(amount,content,clear){
         number = document.createElement("span")
         number.textContent = content
         if(number.textContent=="."){
-            number.style.fontSize = "50px"
+            number.style.fontSize = "40px"
         }else{
             number.style.fontSize = "20px"
         }
@@ -73,4 +73,16 @@ button.style.left="800px"
 button.style.top="100px"
 button.addEventListener("click", () => {
     runCommand()
+})
+
+picker = document.getElementById("colourPicker")
+picker.addEventListener("input", () => {
+    box[0].style.backgroundColor = picker.value
+    box[0].style.borderColor = picker.value
+})
+
+Resetbackground = document.getElementById("reset")
+picker.addEventListener("click", () => {
+    box[0].style.backgroundColor = Resetbackground.value
+    box[0].style.borderColor = Resetbackground.value
 })

@@ -11,7 +11,7 @@
 .box{
     position:absolute;
     top:400px;
-    left:300px;
+    left:600px;
     width:456.67px;
     height:114.17px;
     border-style: solid;
@@ -31,4 +31,11 @@
     width:300px;
     margin-left:100px;
     margin-top:25px;
+}
+
+#reset{
+    position:absolute;
+    top:500px;
+    left:110px;
+    background-color: chartreuse;
 }
