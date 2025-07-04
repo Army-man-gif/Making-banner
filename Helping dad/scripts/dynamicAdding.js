@@ -23,13 +23,18 @@ function changeColor() {
     cut2.style.zIndex = "0";
     box[0].appendChild(cut2);
 
+    /*
     const cut3 = document.createElement("div")
+    cut3.style.position = "absolute";
+    cut3.style.width = "0";
+    cut3.style.height = "0";
     cut3.style.borderTop = parseFloat(height)+"px solid transparent";
-    //cut2.style.borderBottom = parseFloat(height)+"px solid rgba(100, 150, 200, 0.5)";
-    //cut2.style.borderLeft = "230px solid rgba(100, 150, 200, 0.5)";
-    cut3.style.borderRight = "230px solid rgba(100, 150, 200, 0.5)";
+    //cut2.style.borderBottom = parseFloat(height)+"px solid rgba(27, 117, 208, 0.5)";
+    //cut2.style.borderLeft = "230px solid rgba(21, 194, 76, 0.5)";
+    cut3.style.borderRight = "30px solid rgba(228, 23, 43, 0.5)";
     cut3.style.zIndex = "0";
     box[0].appendChild(cut3);
+    */
 }
 function DynamicPopulating(amount,content,clear){
 
