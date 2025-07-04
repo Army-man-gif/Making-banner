@@ -78,7 +78,7 @@ function runCommand(){
     DynamicPopulating(slider1.value,"2",true)
     DynamicPopulating(slider2.value,".",false)
     DynamicPopulating(slider3.value,"√",false)
-}
+}gp
 
 const slider1 = document.getElementById("slider1")
 const TwosCount = document.getElementById("TwosCount")
