@@ -15,11 +15,11 @@ function DynamicPopulating(amount,content,clear){
         }
         number.style.color = "black"
         const computedStyles = window.getComputedStyle(box[0]);
-        maxDisplacementHorizontal = parseFloat(computedStyles.width)-60
+        maxDisplacementHorizontal = parseFloat(computedStyles.width)-150
         randomisedplacement = Math.floor((Math.random()*maxDisplacementHorizontal)+1)
         makeIntoString = randomisedplacement+"px"
 
-        maxDisplacementVertical = parseFloat(computedStyles.height) - 60
+        maxDisplacementVertical = parseFloat(computedStyles.height) - 150
         randomisedplacement2 = Math.floor((Math.random()*maxDisplacementVertical)+1)
         makeIntoString2 = randomisedplacement2+"px"
 
@@ -35,16 +35,7 @@ function DynamicPopulating(amount,content,clear){
 
     }
 }
-/*
-Name = "spin"
-Duration = 3+"s"
-Iterations = "infinite"
-TimingFunction = "linear"
-number.style.animationName = Name
-number.style.animationDuration = Duration
-number.style.animationIterationCount = Iterations
-number.style.animationTimingFunction = TimingFunction
-*/
+
 
 function runCommand(){
     TwosCount.textContent = "Number of 2s: "+slider1.value
