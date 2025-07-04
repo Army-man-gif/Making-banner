@@ -82,7 +82,7 @@ picker.addEventListener("input", () => {
 })
 
 Resetbackground = document.getElementById("reset")
-picker.addEventListener("click", () => {
-    box[0].style.backgroundColor = Resetbackground.value
-    box[0].style.borderColor = Resetbackground.value
+Resetbackground.addEventListener("click", () => {
+    box[0].style.backgroundColor = "#bed4df"
+    box[0].style.borderColor = "#bed4df"
 })
