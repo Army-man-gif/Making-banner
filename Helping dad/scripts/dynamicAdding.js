@@ -42,15 +42,12 @@ function DynamicPopulating(amount,content,clear){
         box[0].innerHTML = "";
     }
     changeColor();
-    AngleToRotateBy = 20
+    let AngleToRotateBy = Math.floor((Math.random()*360)+1)
     for (let i = 0; i < amount; i++) {
+        AngleToRotateBy = Math.floor((Math.random()*360)+1)
         number = document.createElement("span")
         number.textContent = content
-        if(number.textContent=="."){
-            number.style.fontSize = "40px"
-        }else{
-            number.style.fontSize = "20px"
-        }
+        number.style.fontSize = "20px";
         number.style.color = "black"
         const computedStyles = window.getComputedStyle(box[0]);
         maxDisplacementHorizontal = parseFloat(computedStyles.width)-60
@@ -67,7 +64,6 @@ function DynamicPopulating(amount,content,clear){
         number.style.left = makeIntoString
         ConvertAngleToRotateToString = AngleToRotateBy+"deg"
         number.style.rotate = ConvertAngleToRotateToString
-        AngleToRotateBy+=10
         number.style.zIndex = "5";
         box[0].appendChild(number)
 
