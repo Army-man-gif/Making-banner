@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head lang="en-UK">
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>Test Page</title>
+        <link href="styles/style.css" rel="stylesheet" />
+        <script defer src="scripts/dynamicAdding.js"></script>
+    </head>
+    <body>
+        <div class="inputs">
+            <div class="group">
+                <label for="slider1">Count for the 2s</label>
+                <input type="range" min="0" max="20" value="10" id="slider1">
+                <span id="TwosCount">Number of 2s: 10</span>
+            </div>
+
+            <div class="group">
+                <label for="slider2">Count for the dots</label>
+                <input type="range" min="0" max="5" value="5" id="slider2">
+                <span id="DotsCount">Number of dots: 5</span>
+            </div>
+
+            <div class="group">
+                <label for="slider3">Count for the square roots</label>
+                <input type="range" min="0" max="5" value="3" id="slider3">
+                <span id="RootCount">Number of square roots: 3</span>
+            </div>
+        </div>
+        <span class="box">
+        </span>
+
+        <button id="refresh">Refresh</button>
+
+    </body>
+</html>
