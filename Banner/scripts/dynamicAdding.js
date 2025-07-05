@@ -36,6 +36,9 @@ function changeColor() {
     box[0].appendChild(cut3);
     */
 }
+
+let colour  = "black"
+
 function DynamicPopulating(amount,content,clear){
 
     if(clear){
@@ -48,7 +51,8 @@ function DynamicPopulating(amount,content,clear){
         number = document.createElement("span")
         number.textContent = content
         number.style.fontSize = "20px";
-        number.style.color = "black"
+        number.style.color = colour
+        console.log(number.style.color)
         const computedStyles = window.getComputedStyle(box[0]);
         maxDisplacementHorizontal = parseFloat(computedStyles.width)-60
         randomisedplacement = Math.floor((Math.random()*maxDisplacementHorizontal)+1)
@@ -78,7 +82,7 @@ function runCommand(){
     DynamicPopulating(slider1.value,"2",true)
     DynamicPopulating(slider2.value,".",false)
     DynamicPopulating(slider3.value,"√",false)
-}gp
+}
 
 const slider1 = document.getElementById("slider1")
 const TwosCount = document.getElementById("TwosCount")
@@ -86,7 +90,6 @@ const slider2 = document.getElementById("slider2")
 const DotsCount = document.getElementById("DotsCount")
 const slider3 = document.getElementById("slider3")
 const RootCount = document.getElementById("RootCount")
-
 runCommand()
 
 slider1.addEventListener("input",runCommand)
@@ -101,7 +104,9 @@ button.addEventListener("click", () => {
     runCommand()
 })
 
-picker = document.getElementById("colourPicker")
+const picker = document.getElementById("colourPicker")
+const colourPickerForSymbols = document.getElementById("colourPickerForSymbols")
+
 picker.addEventListener("input", () => {
     box[0].style.backgroundColor = picker.value
     box[0].style.borderColor = picker.value
@@ -111,4 +116,10 @@ Resetbackground = document.getElementById("reset")
 Resetbackground.addEventListener("click", () => {
     box[0].style.backgroundColor = "#bed4df"
     box[0].style.borderColor = "#bed4df"
+})
+
+colourPickerForSymbols.addEventListener("input", () => {
+    console.log("symbol colour changed to: "+colourPickerForSymbols.value)
+    colour = colourPickerForSymbols.value
+    runCommand()
 })
