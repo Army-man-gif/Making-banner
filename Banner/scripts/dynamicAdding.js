@@ -37,7 +37,6 @@ function changeColor() {
     */
 }
 
-let colour  = "black"
 
 function DynamicPopulating(amount,content,clear){
 
@@ -51,7 +50,7 @@ function DynamicPopulating(amount,content,clear){
         number = document.createElement("span")
         number.textContent = content
         number.style.fontSize = "20px";
-        number.style.color = colour
+        number.style.color = "black"
         console.log(number.style.color)
         const computedStyles = window.getComputedStyle(box[0]);
         maxDisplacementHorizontal = parseFloat(computedStyles.width)-60
@@ -120,6 +119,10 @@ Resetbackground.addEventListener("click", () => {
 
 colourPickerForSymbols.addEventListener("input", () => {
     console.log("symbol colour changed to: "+colourPickerForSymbols.value)
-    colour = colourPickerForSymbols.value
-    runCommand()
+    const box = document.getElementsByTagName("span")
+    for (let i=0;i<box.length ;i++) {
+        box[i].style.color = colourPickerForSymbols.value
+    }
+
+    //runCommand()
 })
